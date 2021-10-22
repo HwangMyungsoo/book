@@ -1,0 +1,29 @@
+buildscript {
+    ext {
+        springBootVersion = '2.5.5'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+
+
+group 'com.jojoldu.book'
+version '1.0-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compileOnly('org.springframework.boot:spring-boot-starter-web:2.5.5')
+    testCompileOnly('org.springframework.boot:spring-boot-starter-test:2.5.5')
+}
